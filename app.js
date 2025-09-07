@@ -44,4 +44,4 @@ app.use(express.json({ limit: "16kb" }));
 app.use("/api/v1/todos", todoRoutes);
 
 
-export { app };
+export default app;
