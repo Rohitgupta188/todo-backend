@@ -6,7 +6,7 @@ import cors from 'cors'
 const app = express();
 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || "https://todo-frontend-sigma-ten.vercel.app/", 
+  origin: process.env.CORS_ORIGIN || "https://todo-frontend-sigma-ten.vercel.app", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
