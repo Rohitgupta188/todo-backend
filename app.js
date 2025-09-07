@@ -39,6 +39,10 @@ app.use(async (req, res, next) => {
 });
 
 app.use(express.json({ limit: "16kb" }));
+app.use((req, res, next) => {
+  console.log("Incoming request:", req.method, req.url, "from", req.headers.origin);
+  next();
+});
 
 
 app.use("/api/v1/todos", todoRoutes);
