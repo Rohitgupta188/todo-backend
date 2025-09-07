@@ -6,7 +6,7 @@ import cors from 'cors'
 const app = express();
 
 app.use(cors({
-  origin: "https://my-frontend.vercel.app", 
+  origin: process.env.CORS_ORIGIN, 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
